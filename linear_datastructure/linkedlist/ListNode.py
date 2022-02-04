@@ -1,0 +1,9 @@
+class ListNode(object):
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+    def list_init(self, ll: list[int]):
+        ln = None
+        for n in ll[::-1]:
+            ln = ListNode(n, ln)
