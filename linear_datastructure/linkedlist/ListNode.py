@@ -7,3 +7,14 @@ class ListNode(object):
         ln = None
         for n in ll[::-1]:
             ln = ListNode(n, ln)
+
+    def printVal(self, node):
+        if node and node.val and node.next:
+            print(node.val, "->", end=' ')
+            node.next.printVal(node.next)
+        if node and not node.next:
+            print(node.val)
+
+
+    def printAll(self):
+        self.printVal(self)
