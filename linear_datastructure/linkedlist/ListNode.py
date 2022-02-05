@@ -9,7 +9,7 @@ class ListNode(object):
             ln = ListNode(n, ln)
 
     def printVal(self, node):
-        if node and node.val and node.next:
+        if node and node.next:
             print(node.val, "->", end=' ')
             node.next.printVal(node.next)
         if node and not node.next:
